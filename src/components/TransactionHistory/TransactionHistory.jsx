@@ -16,3 +16,7 @@ export function TransactionHistory({transactions}) {
   </tbody>
 </table>)
 }
+
+TransactionHistory.prototype = {
+    transact8iions: PropTypes.arrayOf(PropTypes.shape).isRequired
+}

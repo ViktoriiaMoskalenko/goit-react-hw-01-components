@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from './TransactionHistory.module.css'
 import {TransactionHistoryBg} from './TransactionHistoryBg'
 
@@ -12,4 +13,11 @@ export function TransactionHistoryItem({ transactions }) {
       <td className={css.item}>{currency}</td>
     </tr>)})
   )
+}
+
+TransactionHistoryItem.prototype = {
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired
 }
