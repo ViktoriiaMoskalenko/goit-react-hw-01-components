@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './Statistics.module.css'
+import  './Statistics.css'
 import {StatisticRandomColor} from './StatisticRandomColor'
 
 
