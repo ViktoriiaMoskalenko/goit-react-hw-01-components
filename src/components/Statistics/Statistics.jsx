@@ -1,18 +1,24 @@
 import PropTypes from 'prop-types';
-import css from './Statistics.module.css'
+import './Statistics.module.css'
 import { StatisticItem } from './StatisticItem'
-import { StatisticsTitle } from './StatisticsTitle'
 
-export function Statistics({data}) {
-    return (
-        <section className={css.statistics}>
-                  <StatisticsTitle title = "Section Title"/>
-            <ul className={css.stat_list}>
+
+export const Statistics = ({ data, title }) => 
+ 
+(title ? <section className="statistics">
+           <h2 className="title">{title.title}</h2>
+            <ul className="stat_list">
                 <StatisticItem data={ data } />
   </ul>
-</section>)
-}
+</section> : <section className="statistics">
+            <ul className="stat_list">
+                <StatisticItem data={ data } />
+  </ul>
+    </section>)
+
+
 
 Statistics.prototype = {
-    data: PropTypes.arrayOf(PropTypes.shape).isRequired
+    data: PropTypes.arrayOf(PropTypes.shape).isRequired,
+    title: PropTypes.string
 }
