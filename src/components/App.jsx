@@ -22,7 +22,7 @@ export const App = () => {
     >
       <Profile user={user} />
       
-      <Statistics data={data} />
+      <Statistics data={data} title = "Hello"/>
       <FriendList friends={friends} />
       <TransactionHistory transactions={ transactions } />
     </div>

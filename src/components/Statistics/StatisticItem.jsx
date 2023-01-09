@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import  './Statistics.css'
+import  styles from './Statistics.module.css'
 import {StatisticRandomColor} from './StatisticRandomColor'
 
 
 export function StatisticItem({data}) {
     return (data.map(({ id, label, percentage }) =>
-        <li key={id} className="item" style={{backgroundColor:StatisticRandomColor()}}>
-    <span className="label">{label}</span><br/>
-    <span className="percentage">{percentage}%</span>
+        <li key={id} className={styles.item} style={{backgroundColor:StatisticRandomColor()}}>
+            <span className={styles.label}>{label}</span><br/>
+            <span className={styles.percentage}>{percentage}%</span>
             </li>))
 }
 

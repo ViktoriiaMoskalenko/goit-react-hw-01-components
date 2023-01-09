@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import css from './FriendList.module.css'
+import styles from './FriendList.module.css'
 import { FriendListItem } from './FriendListItem'
 
 export function FriendList({friends}) {
-    return (<ul className={css.friend_list}>
+    return (<ul className={styles.friend_list}>
         <FriendListItem friends={ friends } />
 </ul>)
 }
